@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Home Page</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: url('https://images.pexels.com/photos/371900/pexels-photo-371900.jpeg?cs=srgb&dl=pexels-pixabay-371900.jpg&fm=jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .navbar {
+            background-color: rgba(167, 180, 202, 0.748);
+        }
+        .jumbotron {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 4rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+        }
+        .features {
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 1rem;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #e68900;
+            border-color: #e68900;}
+
+        .btn-custom:hover {
+            background-color: #e68900;
+            border-color: #e68900;
+        }
+        .btn-custom1{
+            background-color: #e68900;
+            border-color: #e68900;
+            text-decoration-color: aliceblue;
+        }
+        .hero {
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .benefits, .services {
+            padding: 40px 0;
+        }
+        .benefit-item, .service-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .benefit-icon, .service-icon {
+            font-size: 40px;
+            color: #e68900;
+        }
+        .contact {
+            padding: 40px 0;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LightMyWay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'detection' %}">Defect detection&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}" role="button">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup' %}" role="button">Signup</a>
+                    </li>
+                   
+    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to LightMyWay</h1>
+            <p>Harness the Power of the Sun</p>
+            <a href="#contact" class="btn btn-custom btn-lg">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="container benefits">
+        <h2 class="text-center">Why Choose Solar Energy?</h2>
+        <div class="row">
+            <div class="col-md-3 benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h3>Eco-Friendly</h3>
+                <p>Solar energy is a clean and renewable source of power, reducing your carbon footprint.</p>
+            </div>
+            <div class="col-md-3 benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>Cost-Effective</h3>
+                <p>Save on your electricity bills and take advantage of incentives and rebates.</p>
+            </div>
+            <div class="col-md-3 benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3>Energy Independence</h3>
+                <p>Generate your own power and reduce reliance on the grid.</p>
+            </div>
+            <div class="col-md-3 benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Increased Property Value</h3>
+                <p>Installing solar panels can increase the value of your property.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container services">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 service-item">
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Residential Solar Solutions</h3>
+                <p>Customized solar panel systems for homes of all sizes.</p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Commercial Solar Solutions</h3>
+                <p>Tailored solar energy solutions for businesses.</p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Maintenance and Support</h3>
+                <p>Comprehensive maintenance services for peak efficiency.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact">
+        <div class="container contact-info">
+            <h2>Contact Us</h2>
+            <p>Ready to learn more? Get in touch with us to schedule a free consultation and discover how solar energy can work for you.</p>
+            <a href="mailto:info@yourcompany.com" class="btn btn-custom btn-lg">Email Us</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LightMyWay. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
